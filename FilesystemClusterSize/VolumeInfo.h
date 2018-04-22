@@ -9,6 +9,6 @@
 #ifndef VolumeInfo_h
 #define VolumeInfo_h
 
-void printVolumeInfo(void);
+char* volumeInfo(void);
 
 #endif /* VolumeInfo_h */

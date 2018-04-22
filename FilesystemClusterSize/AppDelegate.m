@@ -7,13 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#include "VolumeInfo.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    printVolumeInfo();
     return YES;
 }
 

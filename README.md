@@ -2,11 +2,10 @@ Filesystem Cluster Size
 =========
 
 Prints to Xcode console information about volumes on iOS device.
+
 Created in order to quickly get actual [cluster size](https://en.wikipedia.org/wiki/Data_cluster) on a particular device.
 
 ## Example of output:
-
-This table's model would look like this:
 
 ```
 Directory on which mounted: /
