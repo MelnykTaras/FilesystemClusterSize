@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <sys/mount.h>
 #include <stdlib.h>
-#include "string.h"
+#include <string.h>
 
 char* volumeInfo(void)
 {
@@ -62,7 +62,7 @@ char* volumeInfo(void)
         length += strlen(combinedInfo);
     }
     
-    char *output = malloc(length + 1);
+    char *output = malloc(length - mountedVolumesCount + 1);
     memset(output, '\0', sizeof(length + 1));
     
     for (int i = 0; i < mountedVolumesCount; i++) {
