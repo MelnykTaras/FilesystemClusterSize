@@ -83,6 +83,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847D25D3208B3D3E00A7E723 /* Build configuration list for PBXNativeTarget "FilesystemClusterSize" */;
 			buildPhases = (
+				84C2E6D820CC03E100EC5A46 /* ShellScript */,
 				847D25B9208B3D3E00A7E723 /* Sources */,
 				847D25BA208B3D3E00A7E723 /* Frameworks */,
 				847D25BB208B3D3E00A7E723 /* Resources */,
@@ -141,6 +142,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		84C2E6D820CC03E100EC5A46 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/bash;
+			shellScript = "buildNumber=$(/usr/libexec/PlistBuddy -c \"Print CFBundleVersion\" \"$INFOPLIST_FILE\")\nbuildNumber=$(($buildNumber + 1))\n/usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $buildNumber\" \"$INFOPLIST_FILE\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		847D25B9208B3D3E00A7E723 /* Sources */ = {
@@ -272,7 +289,6 @@
 				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEPLOYMENT_POSTPROCESSING = YES;
-				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
